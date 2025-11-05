@@ -1,0 +1,14 @@
+_build
+__pycache__
+.ipynb_checkpoints
+.lintr
+.DS_Store*
+ehthumbs.db
+Icon
+.virtual_documents
+.vscode
+
+exports/*
+!exports/head_coach_dismissal.pdf
+
+src/data/extracted*
