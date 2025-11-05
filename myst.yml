@@ -1,0 +1,38 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  title: Étude des relations entre l'entraîneur sportif et la performance du club
+  github: https://github.com/mathisdrn/head_coach_dismissal/
+  license: 
+    content: CC-BY-SA-4.0
+    code: MIT
+  subject: research
+  date: 2024-02-10
+  authors: 
+    - name: Mathis Derenne
+      affiliation: uor
+      github: mathisdrn
+    - name: Ewann Boismartel
+      affiliation: uor
+    - name: Scott Thomas
+      affiliation: uor
+    - name: Romain Biguet
+      affiliation: uor
+  affiliations: 
+    - id: uor
+      institution: University of Rennes
+  exports:
+    - format: typst
+      template: lapreprint-typst
+      output: ./exports/head_coach_dismissal.pdf
+      articles:
+        - file: Paper.md
+  downloads:
+  - file: https://raw.githubusercontent.com/mathisdrn/head_coach_dismissal/master/exports/head_coach_dismissal.pdf
+    title: PDF version
+    filename: head_coach_dismissal.pdf
+  settings:
+    output_matplotlib_strings: remove
+site:
+  title: "Head coach dismissal effect on team performance"
+  template: article-theme
