@@ -6,7 +6,7 @@
 
 Python et les librairies Python évoluent rapidement:
 
-<img src="./assets/Capture d’écran 2025-10-25 à 21.19.18.png" alt="Capture d’écran 2025-10-25 à 21.19.18" style="zoom:33%;" />
+<img src="./assets/Capture%20d’écran%202025-10-25%20à%2021.19.18.png" alt="Capture d’écran 2025-10-25 à 21.19.18" style="zoom:33%;" />
 
 Un code écrit pour `pandas 1.0`  ne fonctionera probablement pas avec `pandas 2.0`.
 
