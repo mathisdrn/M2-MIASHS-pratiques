@@ -337,3 +337,4 @@ model = load("../model/model.pkl")
 - de plus en plus de pratiques issues du développement: des outils déclaratifs, versioning, tests unitaires, type hint, etc.
 
 - implémentation de référence: [GitLab Data](https://gitlab.com/gitlab-data/analytics)
+- pipeline [ELT + data visualisation](https://rmoff.net/2025/03/20/building-a-data-pipeline-with-duckdb/) avec DuckDB
