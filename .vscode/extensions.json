@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "charliermarsh.ruff",
+        "mathematic.vscode-pdf",
+        "ms-toolsai.datawrangler",
+        "myriad-dreamin.tinymist",
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+    ]
+}

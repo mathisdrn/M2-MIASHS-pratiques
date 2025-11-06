@@ -1,0 +1,13 @@
+[project]
+name = "demo-mlflow"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ipykernel>=7.1.0",
+    "mlflow>=3.5.1",
+    "pandas>=2.3.3",
+    "pip>=25.3",
+    "scikit-learn>=1.7.2",
+]

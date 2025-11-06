@@ -1,4 +1,4 @@
-## Partage de connaissances - Master MIASHS 
+## Partage de connaissances - Master MIASHS
 
 [TOC]
 
@@ -8,7 +8,7 @@ Python et les librairies Python évoluent rapidement:
 
 <img src="./assets/Capture%20d’écran%202025-10-25%20à%2021.19.18.png" alt="Capture d’écran 2025-10-25 à 21.19.18" style="zoom:33%;" />
 
-Un code écrit pour `pandas 1.0`  ne fonctionera probablement pas avec `pandas 2.0`.
+Un code écrit pour `pandas 1.0` ne fonctionera probablement pas avec `pandas 2.0`.
 
 <img src="./assets/36191276-5bc817c0-116d-11e8-89cb-b5c96c054936.jpg" alt="Works on My Machine · Issue #1738 · kelseyhightower/nocode" style="zoom:33%;" />
 
@@ -16,7 +16,7 @@ On a besoin d'expliciter les dépendances utilisées par un projet afin de garan
 
 `uv` est devenu le principal outil pour gérer les environnements (remplace progressivement `conda`).
 
-``````bash
+```bash
 # Créer un environnement virtuel
 uv init
 
@@ -32,11 +32,11 @@ uv sync
 
 # uvx permet d'exécuter "à la volée" des commandes dépendant de libraries Python
 uvx marimo edit
-``````
+```
 
 #### Utiliser le terminal
 
-```````bash
+```bash
 # Se déplacer dans un dossier
 cd ./dossier
 # Et revenir au dossier parent
@@ -56,7 +56,7 @@ alias cdgh='cd /Users/mathisderenne/GitHub/'
 # Windows (PowerShell) - définir des alias
 function c { code . -r }
 function cdgh { cd "C:/Users/mathisderenne/GitHub" }
-```````
+```
 
 **Améliorer son expérience dans le terminal en installant un shell: https://starship.rs/**
 
@@ -69,18 +69,14 @@ function cdgh { cd "C:/Users/mathisderenne/GitHub" }
 
 `Git` != `GitHub`/`GitLab` : plateforme d’hébergement de projets Git
 
-
-
 **Quelques conventions sur la structure des projets Git**:
 
-- `README.md` décrit le projet 
+- `README.md` décrit le projet
 - `.gitignore`précise les éléments ignorés par Git
 - dossiers courant:
   - `./src`: code source du projet
-  -  `./assets`: images, logos
-  -  `./docs`, `./data`, `./test`
-
-
+  - `./assets`: images, logos
+  - `./docs`, `./data`, `./test`
 
 `GitHub Pages`permet d’héberger une page statique gratuitement -> utile pour CV en ligne ([tutoriel en 5 minutes](https://gemini.google.com/app/efb550fc7df0d29e)) / projets démos.
 
@@ -90,6 +86,7 @@ function cdgh { cd "C:/Users/mathisderenne/GitHub" }
 - formatter le code automatiquement ([extension Ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff))
 - lire des fichiers PDF ([extension PDF Viewer](https://marketplace.visualstudio.com/items?itemName=mathematic.vscode-pdf))
 - explorer des fichiers de données tabulaires ([extension Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler))
+- ouvrir des pages web (Ctrl+Shift+P -> `Simple Browser`)
 - GitHub Copilot ([gratuit pour les étudiants](https://docs.github.com/fr/education/about-github-education/github-education-for-students/apply-to-github-education-as-a-student))
 - mes [settings.json](https://gist.github.com/mathisdrn/2c46f1924edbfb905e4023d0251d0a8b)
 
@@ -97,8 +94,8 @@ function cdgh { cd "C:/Users/mathisderenne/GitHub" }
 
 #### Rédaction scientifique et communication autour de projets data
 
-- rédiger rapport de stage/alternance: **Typst** ([extension Tinymist](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist))  
-- présenter des projets data avec **MystMD**
+- rédiger rapport de stage/alternance: **Typst** ([extension Tinymist](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist))
+- présenter des projets data avec **MystMD** 
 - créer des diagrammes avec **Mermaid** ([Mermaid Live Editor](https://mermaid.live/edit#pako:eNpFjctqwzAQRX9FzNo1fslxtU3pA1ooNJsWbxRr7IjImqBItKnxv1dxaHJXM4dzZyboSCEI8HpEoy22lsV47Q2yZ3305E6MevZBnZaGvaHSkr0b6Xty48Utsqxggr1qu0f1Yq-wivBRdrgl2l_gEsGeiAaDV49H9ElhE7Y3Vke2-dbeo4MEBqcVCO8CJjCiG-V5helst-B3OGILIo4KexmMb6G1c6wdpP0iGv-bjsKwA9FLc4xbOCjp8UHLwcmbglahW1OwHgRfLoCY4AfEXV6kvC54VTRlnWX3qyqBE4gyy9O85Hld8Qh5U88J_C4_s7RZ8fkPJlNpRA))
 
 ```mermaid
@@ -106,7 +103,7 @@ graph LR
     A[Mermaid] --> B[Organigrammes]
     A --> C[Séquences]
     A --> D[Classes]
-    
+
     style A fill:#e1f5ff,stroke:#01579b,stroke-width:3px
     style B fill:#fff3e0,stroke:#e65100
     style C fill:#f3e5f5,stroke:#4a148c
@@ -200,11 +197,9 @@ Exemples de features engineering:
 
   -> l'absence de modélisation pleinement efficace participe aussi à l'absence de robustesse des modèles.
 
-
-
 #### Les pipelines sklearn
 
-``````python
+```python
 import polars as pl
 
 # Load data
@@ -256,7 +251,7 @@ pipeline = Pipeline(steps=[
 # Used the same way as model
 model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
-``````
+```
 
 Pourquoi utiliser les pipelines `sklearn`:
 
@@ -269,7 +264,7 @@ Pourquoi utiliser les pipelines `sklearn`:
 
 #### Sauvegarder un modèle
 
-``````python
+```python
 from joblib import load, dump
 
 # Train the model
@@ -280,11 +275,12 @@ dump(model, "../model/model.pkl")
 
 # Load the model
 model = load("../model/model.pkl")
-``````
+```
 
 #### [MLFlow](https://mlflow.org/docs/latest/ml/getting-started/): Surveiller, enregistrer et réutiliser des modèles
 
 - C'est quoi une API ?
+- [OpenAPI Swagger](https://editor.swagger.io/)
 
 #### L'écosystème d'outils data
 
@@ -293,8 +289,6 @@ model = load("../model/model.pkl")
 - un outil de transformation de données
 - un outil de présentation des données
 - un outil d'orchestration
-
-
 
 <img src="./assets/865px-DEC_VT100_terminal_transparent-w300.jpg" alt="The DEC VT100 terminal had an 80×24 display. Over a million of them were sold. Photo from Jason Scott, (CC BY-SA 4.0)." style="zoom:50%;" />
 
@@ -309,19 +303,19 @@ model = load("../model/model.pkl")
 
 <img src="./assets/Capture d’écran 2025-11-05 à 16.35.22.png" alt="Capture d’écran 2025-11-05 à 16.35.22" style="zoom: 25%;" />
 
- **But SQL is still everwhere**
+**But SQL is still everwhere**
 
 - SQL reste toujours l'interface **finale** pour parler au moteur de la base de données
 
 - La syntaxe SQL continue de s'améliorer ([DuckDB - FriendlySQL](https://duckdb.org/docs/stable/sql/dialect/friendly_sql): FROM avant SELECT, GROUP BY ALL, etc.)
 
-- Côté applicatif: les ORM (object relational mapping) ou `sqlc` 
+- Côté applicatif: les ORM (object relational mapping) ou `sqlc`
 
 - Côté analytique:
 
   - outils de transformation basée sur du SQL (dbt ou SQLMesh):
 
-    - Plusieurs fichiers SQL sont responsables de nettoyer et structurer progressivement la donnée. 
+    - Plusieurs fichiers SQL sont responsables de nettoyer et structurer progressivement la donnée.
 
     - Ces outils comprennent le code SQL et créent des graphs de dépendances acycliques
 
@@ -333,18 +327,13 @@ model = load("../model/model.pkl")
 
     - notion de layer sémantique (Modèle sémantique Power BI, [LookML](https://docs.cloud.google.com/looker/docs/what-is-lookml?hl=fr), [Malloy.dev](https://www.malloydata.dev/) - [blog de post](https://carlineng.com/?postid=malloy-intro#blog)) -> malgré tout nécessaire car on ne peut pas tout pré-calculer et on peut aussi faire des jointures syntaxiquement valables mais qui n'ont pas de sens sémantiquement
 
-  - modélisation dans l'entrepôt de données (modèle en étoile - table de faits et de dimensions) 
+  - modélisation dans l'entrepôt de données (modèle en étoile - table de faits et de dimensions)
 
     <img src="./assets/The-material-fact-table-and-its-supporting-dimension-tables.png" alt="The material fact table and its supporting dimension tables. " style="zoom: 67%;" />
-
-
-
-
 
 **Tendances globales:**
 
 - nouveaux outils cloud avec des interfaces modernes (Snowflake, Databrick, AirByte, Superset) mais il existe toujours des outils legacy (Talend, QLick, Microsoft SSIS)
 - de plus en plus de pratiques issues du développement: des outils déclaratifs, versioning, tests unitaires, type hint, etc.
-
 
 - implémentation de référence: [GitLab Data](https://gitlab.com/gitlab-data/analytics)
